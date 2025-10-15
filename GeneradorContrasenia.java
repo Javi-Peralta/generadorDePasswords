@@ -1,4 +1,6 @@
 package generadorContrasenia;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class GeneradorContrasenia {
@@ -7,6 +9,8 @@ public class GeneradorContrasenia {
 
 		Scanner Teclado = new Scanner(System.in);
 		int contrasenia, contraseniaLongMax, contraseniaLongMin, ubicacionElementoLetras, contadorCiclosWhile = 0;
+		String passwordString = null;
+		String[] password = null;
 
 		String[] letras = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
 				"S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
@@ -22,14 +26,15 @@ public class GeneradorContrasenia {
 			contrasenia = (int)(Math.random()*contraseniaLongMax);
 		} while (contrasenia < contraseniaLongMin);
 
+		System.out.println("\nLa contraseña es:");
 		do {
 			contadorCiclosWhile++;
 			ubicacionElementoLetras = (int)(Math.random()*letras.length);
 			System.out.print(letras[ubicacionElementoLetras]);
 		} while (contrasenia > contadorCiclosWhile);
 
-		System.out.println("\n" + contrasenia);
-		System.out.println(contadorCiclosWhile);
+		System.out.println("\n");
+//		System.out.println(contadorCiclosWhile);
 		Teclado.close();
 	}
 }
