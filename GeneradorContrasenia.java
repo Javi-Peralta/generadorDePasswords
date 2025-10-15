@@ -9,8 +9,6 @@ public class GeneradorContrasenia {
 
 		Scanner Teclado = new Scanner(System.in);
 		int contrasenia, contraseniaLongMax, contraseniaLongMin, ubicacionElementoLetras, contadorCiclosWhile = 0;
-		String passwordString = null;
-		String[] password = null;
 
 		String[] letras = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
 				"S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
